@@ -1,30 +1,7 @@
-**Set Up the Base HTML Structure**
+The FitBuddy – AI Fitness Plan Generator is a comprehensive, user-centric web application that showcases the powerful synergy between artificial intelligence and health-tech solutions. Designed to assist individuals in achieving their fitness goals, FitBuddy uses Google’s Gemini 1.5 Pro and Gemini Flash models to generate personalized 7-day workout plans and daily nutrition or recovery tips based on user inputs such as age, weight, fitness goal, and preferred workout intensity.
 
-- Developed index.html as the main entry point for user input.
-- Structured the form to capture:
-  - username, user_id, age, weight, goal, and intensity.
-- Each field is properly labeled and grouped using semantic HTML.
-- The design uses a gym-themed background image, Google Fonts (Roboto), and bold typography to create a clean, fitness-oriented interface.
-- Navigation is kept minimal for focus, and user flow directs clearly from input to output.
+The application is built using the FastAPI framework for backend logic and API handling, SQLAlchemy with SQLite for persistent data storage, and Jinja2 templating for a clean and responsive frontend. Upon submitting their details on the homepage, users receive a tailored workout plan that includes warm-ups, main workouts, cooldowns, and goal-aligned tips. What sets FitBuddy apart is its dynamic feedback feature—users can provide input on the effectiveness or difficulty of their current plan, and the system responds by intelligently updating the plan using generative AI, ensuring ongoing customization and engagement.
 
-**Design a Responsive Layout Using CSS**
+Additionally, the application includes an administrative view where all registered users and their respective plans (original and updated) are displayed in a structured format. This functionality supports transparency, monitoring, and further optimization, making FitBuddy suitable for both individual users and coaches or institutions managing multiple fitness profiles.
 
-- Embedded CSS styles were applied directly in each HTML file.
-- Layouts use Flexbox to center content both vertically and horizontally.
-- Media queries ensure mobile responsiveness.
-- Buttons have consistent styling with hover effects.
-- Input fields and result blocks have adequate padding, shadows, and rounded corners for modern aesthetics.
-- Overall color scheme supports readability on a dark background.
-
-**Create Separate Pages for Each Core Functionality**
-
-Three Jinja2-powered HTML templates were created under /templates:
-
-- index.html: A user input form with fields for fitness goal, intensity, and basic personal information.
-- result.html: Displays the 7-day AI generated workout plan, a nutrition tip, and accepts user feedback.
-- all_users.html: Admin panel to view and delete users and review both original and updated plans.
-
-Templates are modular, and UI transitions smoothly between steps.
-
-Forms are submitted to specific FastAPI endpoints via POST methods# fitbuddy
-AI Fitness Plan Generator
+Overall, FitBuddy stands as a scalable and adaptable AI-powered solution that not only personalizes the fitness journey but also evolves with the user’s progress and preferences. It demonstrates how cutting-edge technology can be integrated into everyday wellness routines to promote healthy, consistent, and goal-oriented lifestyles.
